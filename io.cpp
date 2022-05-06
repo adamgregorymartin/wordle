@@ -1,7 +1,5 @@
 #include "io.h"
 
-//#include "word.h"
-
 using namespace std;
 
 void IO::trim(string &str)
@@ -36,30 +34,17 @@ void IO::toLower(string &str)
     }
 }
 
-string IO::getWord()
+Word* IO::getWord()
 {
-    string word;
+    string str;
     while (true)
     {
-        cin >> word;
-        IO::trim(word);
-        if (!IO::isAlpha(word)) continue;
-        toLower(word);
-        if (word.length() == 5) break; // TODO change to a call to WORD class
+        cin >> str;
+        IO::trim(str);
+        if (!IO::isAlpha(str)) continue;
+        toLower(str);
+        if (Word::isValid(str)) break;
     }
+    Word *word = new Word(str);
     return word;
 }
-
-/*
-Word readGuess()
-{
-    string guess;
-    do
-    {
-        cin >> guess;
-        trim(guess);
-    } while (!isValidGuess(guess));
-    convertToLowercase(guess);
-    return Word(guess);
-}
-*/

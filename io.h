@@ -2,6 +2,7 @@
 #define IO_H
 
 #include <iostream>
+#include "word.h"
 
 class IO
 {
@@ -11,7 +12,7 @@ private:
     void toLower(std::string &str);
 
 public:
-    std::string getWord();
+    Word* getWord();
 };
 
 #endif
