@@ -13,6 +13,7 @@ private:
 
 public:
     Word(std::string &str);
+    Word(char chars[6]);
     static bool isValid(std::string &lowerAlphaStr);
     friend std::ostream &operator<<(std::ostream &stream, const Word &word);
 };

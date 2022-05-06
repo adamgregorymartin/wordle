@@ -9,10 +9,11 @@ int main()
 {
     cout << "a beginning wordle application" << endl;
 
+    Word solution("apple");
     IO io;
-    Word *word = io.getWord();
-    cout << *word << endl;
-    delete word;
+    Word *guess = io.getWord();
+    cout << *guess << endl;
+    delete guess;
 
     cout << "end" << endl;
     return 0;

@@ -11,6 +11,14 @@ Word::Word(string &str)
     }
 }
 
+Word::Word(char chars[6])
+{
+    for (char i = 0; i < Word::LENGTH; ++i)
+    {
+        this->chars[i] = chars[i];
+    }
+}
+
 bool Word::isValid(string &lowerAlphaStr)
 {
     // str is composed of only lowercase letters

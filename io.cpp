@@ -15,9 +15,9 @@ void IO::trim(string &str)
 
 bool IO::isAlpha(string &str)
 {
-    for (string::iterator it = str.begin(); it != str.end(); ++it)
+    for (const char &c : str)
     {
-        if ((*it < 'a' || *it > 'z') and (*it < 'A' || *it > 'Z'))
+        if ((c < 'a' || c > 'z') and (c < 'A' || c > 'Z'))
             return false;
     }
     return true;
