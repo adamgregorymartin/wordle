@@ -12,9 +12,9 @@ private:
     char chars[LENGTH];
 
 public:
-    Word(std::string &str);
-    Word(char chars[6]);
+    Word(std::string str);
     static bool isValid(std::string &lowerAlphaStr);
+    const char &charAt(const char &i) const;
     friend std::ostream &operator<<(std::ostream &stream, const Word &word);
 };
 

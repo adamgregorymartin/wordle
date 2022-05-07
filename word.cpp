@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Word::Word(string &str)
+Word::Word(string str)
 {
     char i = 0;
     for (const char &c : str)
@@ -11,18 +11,15 @@ Word::Word(string &str)
     }
 }
 
-Word::Word(char chars[6])
-{
-    for (char i = 0; i < Word::LENGTH; ++i)
-    {
-        this->chars[i] = chars[i];
-    }
-}
-
 bool Word::isValid(string &lowerAlphaStr)
 {
     // str is composed of only lowercase letters
     return lowerAlphaStr.length() == Word::LENGTH;
+}
+
+const char &Word::charAt(const char &i) const
+{
+    return chars[i];
 }
 
 ostream &operator<<(ostream &stream, const Word &word)

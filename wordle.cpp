@@ -2,17 +2,28 @@
 
 #include "io.h"
 #include "word.h"
+#include "word_comparer.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "a beginning wordle application" << endl;
+    cout << "Wordle" << endl;
 
     Word solution("apple");
+
+    cout << "Enter a guess: ";
     IO io;
     Word *guess = io.getWord();
-    cout << *guess << endl;
+
+    cout << "You guessed: " << *guess << endl;
+
+    WordComparer comparer;
+    comparer.initSolution(&solution);
+    string feedback = comparer.getGuessFeedback(guess);
+
+    cout << "Guess feedback: " << feedback << endl;
+
     delete guess;
 
     cout << "end" << endl;
