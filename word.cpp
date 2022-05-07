@@ -22,6 +22,16 @@ const char &Word::charAt(const char &i) const
     return chars[i];
 }
 
+char Word::charLowercaseIndex(char &charIndex)
+{
+    return chars[charIndex] - 'a';
+}
+
+char Word::lowercaseIndex(char &c)
+{
+    return c - 'a';
+}
+
 ostream &operator<<(ostream &stream, const Word &word)
 {
     for (const char &c : word.chars)

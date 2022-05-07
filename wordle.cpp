@@ -2,12 +2,14 @@
 
 #include "io.h"
 #include "word.h"
-#include "word_comparer.h"
+#include "feedback_builder.h"
+#include "feedback.h"
 
 using namespace std;
 
 int main()
 {
+    // rename WordComparer to FeedbackGenerator
     cout << "Wordle" << endl;
 
     Word solution("apple");
@@ -18,9 +20,10 @@ int main()
 
     cout << "You guessed: " << *guess << endl;
 
-    WordComparer comparer;
-    comparer.initSolution(&solution);
-    string feedback = comparer.getGuessFeedback(guess);
+    FeedbackBuilder builder;
+    Feedback feedback;
+    builder.init(&solution);
+    builder.buildFeedback(guess, &feedback);
 
     cout << "Guess feedback: " << feedback << endl;
 
