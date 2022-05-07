@@ -35,6 +35,8 @@ public:
     char (&getMisplacedIndices())[Word::LENGTH] { return misplacedChanges; }
     char getNMisplaced() { return nMisplaced; }
 
+    bool isCorrect() { return nCorrect == Word::LENGTH; }
+
     // bool isConsistentWith(Word *word);
     friend std::ostream &operator<<(std::ostream &stream, const Feedback &feedback);
 };
