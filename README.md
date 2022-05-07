@@ -1,5 +1,5 @@
 # wordle
-This is a command line application for the NYT game Wordle. 
+This is a command line application for the NYT game Wordle.
 The project includes a framework to play the game and algorithms to estimate optimal guesses.
 
 v1
