@@ -37,5 +37,4 @@ Design an algorithm to compute effective guesses based on previous guesses and f
       - 3/4 of the probability mass of P1 is likely far fewer than 13,000 * (3/4)
     - Within each round, the result following a complete representation of feedback may be cached.
     - The first guess can be computed ahead of time and stored.
-    
-
+  
